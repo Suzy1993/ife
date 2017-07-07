@@ -1,0 +1,479 @@
+#total{
+	/*设置页面的最小宽度*/
+	/*当浏览器窗口宽度小于最小宽度时，出现横向滚动条，页面宽度保持不变*/
+	/*当浏览器窗口宽度大于最小宽度时，页面宽度应保持和浏览器窗口宽度一致*/
+	min-width:1300px;
+	width:1300px;
+	font-family:Microsoft YaHei;
+}
+#logo{
+	float:left;
+	margin-left:50px;
+	width:62px;
+	height:48px;
+	background:url("../images/task7_2.png");
+}
+#title{
+	font-size:20px;
+	font-weight:bold;
+	width:200px;
+	height:50px;
+	line-height:50px;
+	float:left;
+	margin-left:10px;
+}
+#lists{
+	/*ul默认display:block*/
+	/*设置float:right可以使ul与前一个相邻元素在同一行显示*/
+	float:right;
+	/*ul默认padding-left:40px，margin-top:16px，margin-bottom:16px*/
+	/*去掉ul默认的margin和padding*/
+	margin:0;
+	padding:0;
+}
+#lists li{
+	width:80px;
+	/*设置li的文字垂直居中显示*/
+	height:50px;
+	line-height:50px;
+	font-size:16px;
+	/*li默认display:list-item*/
+	/*设置display:inline可以使li在同一行显示*/
+	/*然而设置了display:inline的元素不能设置宽高，为了能设置li的宽和高，需要设置display:inline-block*/
+	display:inline-block;
+	text-align:center;
+	/*为所有li统一设置白色下边框（与背景色一致，不可见），以便后续修改第一个li（首页）的下边框颜色为红色*/
+	border-bottom:5px solid white;
+}
+#lists li a{
+	/*去掉链接默认的下划线*/
+	text-decoration:none;
+}
+#lists li:first-child,#lists li:last-child{
+	/*设置第一个li（首页）和最后一个li（登录）的字体颜色为红色*/
+	color:#E74F4D;
+}
+#lists li:first-child{
+	/*设置第一个li（首页）的下边框颜色为红色*/
+	border-bottom:5px solid #E74F4D;
+}
+#page{
+	float:left;
+	width:100%;
+	height:600px;
+	background:url("../images/task7_1.png");
+}
+#lead{
+	width:500px;
+	height:300px;
+	margin-left:100px;
+	margin-top:200px;
+}
+#English{
+	font-size:64px;
+}
+.Chinese{
+	font-size:20px;
+}
+#button{
+	margin-top:50px;
+	background:#E74F4D;
+	width:300px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-family:Microsoft YaHei;
+	font-size:30px;
+	color:white;
+}
+.icon{
+	float:left;
+	width:325px;
+	height:164px;
+	text-align:center;
+}
+.icon img{
+	margin-top:50px;
+}
+.classes{
+	float:left;
+	margin-bottom:50px;
+	width:182px;
+	height:50px;
+	padding:0 70px;
+	text-align:center;
+	font-family:Microsoft YaHei;
+	font-size:16px;
+	color:grey;
+}
+.line{
+	float:left;
+	width:4px;
+	height:50px;
+	background:grey;
+}
+#question{
+	float:left;
+	width:100%;
+	text-align:center;
+	background:grey;
+}
+#question #img{
+	margin-top:50px;
+	margin-bottom:20px;
+}
+#content{
+	text-align:center;
+	color:white;
+	font-family:Microsoft YaHei;
+	font-size:48px;
+	margin-bottom:50px;
+}
+#search{
+	float:left;
+	width:100%;
+	height:300px;
+	background:url("../images/task7_8.png");
+}
+.subtitle{
+	margin-top:50px;
+	text-align:center;
+	color:grey;
+	font-family:Microsoft YaHei;
+	font-size:20px;
+}
+.subline{
+	width:30px;
+	height:2px;
+	margin:5px auto;
+	background:grey;
+}
+.subtext{
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align:center;
+	color:grey;
+	font-family:Microsoft YaHei;
+	font-size:15px;
+}
+#question form{
+    width:100%;
+    height:168px;
+    margin-top:20px;
+	padding-left:126px;
+}
+#question form div,#question form input{
+    width:236px;
+    height:34px;
+    float:left;
+}
+#question form div{
+	/*设置相邻下拉列表的水平间距*/
+    margin-right:28px;
+    background:#FFFFFF;
+}
+#question form div:hover{
+	/*设置鼠标悬浮到下拉列表上时边框为红色*/
+    border:1px solid #E74F4D;
+}
+#question form ul{
+	/*ul默认padding-left:40px，margin-top:16px，margin-bottom:16px*/
+	/*去掉ul默认的margin和padding*/
+	margin:0;
+	padding:0;
+}
+#question form ul li:first-child{
+	/*设置第一个选项的高度和行高*/
+    height:34px;
+    line-height:34px;
+}
+#question form ul li{
+    width:236px;
+	/*前面已经设置了第一个选项的高度和行高，此处设置除了第一个选项外的其他选项的高度和行高*/
+    height:24px;
+    line-height:24px;
+    font-size:15px;
+    color:#323333;
+	/*设置所有选项的不透明度*/
+    opacity:0.7;
+    background:#e3e3e5;
+    /*设置所有选项内容的首字缩进*/
+    text-indent:12px;
+    /*设置所有选项默认不显示*/
+	display:none;
+}
+#question form ul li.active{
+	/*前面已经设置所有选项的隐藏，背景，不透明度，此处设置active的选项的相应属性*/
+	/*显示active的选项*/
+    display:block;
+	/*自定义下拉列表的小图片*/
+    background:url("../images/task7_9.png") no-repeat scroll right center;
+	/*设置active的选项的不透明度*/
+    opacity:1;
+}
+#question form ul li:not(.active):hover{
+	/*设置除了active的选项外，鼠标悬浮时背景色为#E74F4D，文字颜色为白色*/
+    background:#E74F4D;
+    color:white;
+}
+#question form input{
+    background:#E74F4D;
+    font-size:15px;
+    color:white;
+	font-family:Microsoft YaHei;
+	/*input文本框默认有边框，去掉其默认边框*/
+	border:none;
+}
+.activities{
+	/*为了shanghai能设置position:absolute;left:0;bottom:0*/
+	position:relative;
+	float:left;
+    width:220px;
+    height:370px;
+	margin:50px 30px;
+}
+#beijing{
+	margin-left:120px;
+}
+#shanghai{
+	/*shanghai相对于设置了position:relative的父元素activities定位,位于其左下角*/
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.activities img{
+	/*为图片设置白色边框*/
+	border:10px white solid;
+}
+.city{
+    font-size:15px;
+	font-family:Microsoft YaHei;
+}
+.style{
+    font-size:12px;
+    color:white;
+	font-family:Microsoft YaHei;
+}
+#special{
+    font-size:20px;
+	font-family:Microsoft YaHei;
+}
+#circleImg{
+	float:left;
+	width:900px;
+	height:600px;
+	background:url("../images/task7_11.png");
+}
+#circleContent{
+	float:left;
+	width:400px;
+	height:600px;
+	background:grey;
+}
+.circleText{
+	width:400px;
+	height:600px;
+	text-align:center;
+    font-size:12px;
+	font-family:Microsoft YaHei;
+	color:white;
+}
+.circleTitle{
+	width:250px;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+    font-size:24px;
+	margin-left:75px;
+	margin-top:150px;
+	color:#E74F4D;
+}
+.circleDiv{
+	width:250px;
+	text-align:center;
+	margin-left:75px;
+	margin-top:50px;
+}
+.circleDetail{
+	width:160px;
+	height:40px;
+	line-height:40px;
+	border:1px solid #E74F4D;
+	margin-left:120px;
+	color:#E74F4D;
+	margin-top:50px;
+}
+.more{
+	float:left;
+	width:450px;
+	height:500px;
+}
+.in{
+	width:200px;
+	height:200px;
+	font-size:20px;
+	font-family:Microsoft YaHei;
+	text-align:center;
+	margin-top:150px;
+	margin-left:125px;
+}
+#first{
+    background:#E74F4D;
+	color:white;
+}
+.inLine{
+	float:left;
+	width:30px;
+	height:2px;
+	background:white;
+	margin:50px 85px;
+}
+#second{
+	background:grey;
+}
+#lookForOne{
+	float:left;
+	width:160px;
+	height:40px;
+	line-height:40px;
+	border:1px solid white;
+	margin-left:20px;
+}
+#lookForTwo{
+	float:left;
+	width:160px;
+	height:40px;
+	line-height:40px;
+	border:1px solid #E74F4D;
+	color:#E74F4D;
+	margin-left:20px;
+}
+#rightImg{
+	float:left;
+	width:400px;
+	height:500px;
+	background:url("../images/task7_12.png");
+}
+#ad{
+	float:left;
+	width:100%;
+	height:200px;
+	text-align:center;
+}
+#more{
+	float:left;
+	width:300px;
+	height:300px;
+	font-size:12px;
+	color:grey;
+	font-family:Microsoft YaHei;
+	margin-left:200px;
+	margin-bottom:50px;
+}
+#more p{
+	font-size:16px;
+	font-weight:bold;
+	color:black;
+}
+.ellipsis{ 
+	/*一定要设置宽度*/
+	width:300px; 
+    overflow:hidden;  
+	display:-webkit-box !important; 
+    -webkit-box-orient:vertical;  
+	/*-webkit-line-clamp限制在一个块元素显示文本的行数，需要结合WebKit属性display:-webkit-box和-webkit-box-orient属性*/
+    -webkit-line-clamp:2;  
+}
+.moreInfo{
+	width:100%;
+	height:20px;
+	/*自定义more的背景图片：下箭头*/
+	background:url("../images/task7_13.png") no-repeat 88% center;
+	text-align:right;
+}
+#register{
+	float:left;
+	width:550px;
+	height:300px;
+	font-size:12px;
+	font-family:Microsoft YaHei;
+	margin-left:50px;
+	margin-bottom:50px;
+}
+.forms{
+	padding-left:10px;
+	width:250px;
+	height:40px;
+	line-height:40px;
+	background:grey;
+	float:left;
+	margin:5px 10px 10px 0;
+}
+#textarea{
+	padding-top:10px;
+	padding-left:10px;
+	float:left;
+	width:520px;
+	height:120px;
+	background:grey;
+	float:left;
+	margin:5px 10px 10px 0;
+}
+#register input[type="submit"]{
+	/*submit按钮默认有边框，去掉其默认边框*/
+	border:none;
+	width:530px;
+	height:40px;
+	line-height:40px;
+	background:grey;
+	font-size:16px;
+	font-family:Microsoft YaHei;
+}
+#register input[type="text"],textarea{
+	/*input文本框默认有边框，去掉其默认边框*/
+	border:none;
+	background:grey;
+}
+textarea{
+	width:500px;
+	height:80px;
+}
+#contact{
+	float:left;
+	width:100%;
+	height:300px;
+	background:black;
+}
+#contact input[type="text"]{
+	margin-left:460px;
+	width:300px;
+	height:40px;
+	border:none;
+}
+#contact input[type="submit"]{
+	width:80px;
+	height:42px;
+	border:none;
+	background:grey;
+	/*设置submit按钮与input文本框紧挨着*/
+	margin-left:-5px;
+}
+#ways{
+	width:116px;
+	height:32px;
+	margin-top:30px;
+	margin-left:592px;
+}
+#foot{
+	width:100%;
+	height:50px;
+	background:grey;
+	float:left;
+	line-height:50px;
+	text-indent:100px;
+	font-size:12px;
+}
+#foot div{
+	float:right;
+	text-align:right;
+}

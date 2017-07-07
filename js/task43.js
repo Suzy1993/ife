@@ -1,0 +1,69 @@
+﻿window.onload = function() {
+	var images = document.getElementsByClassName("images");
+	var width = parseInt(images[0].style.width);
+	var height = parseInt(images[0].style.height);
+	var img11 = document.getElementById("img11");
+	var img21 = document.getElementById("img21");
+	var img31 = document.getElementById("img31");
+	var img32 = document.getElementById("img32");
+	var img33 = document.getElementById("img33");
+	var img41 = document.getElementById("img41");
+	var img42 = document.getElementById("img42");
+	var img43 = document.getElementById("img43");
+	var img44 = document.getElementById("img44");
+	var img51 = document.getElementById("img51");
+	var img52 = document.getElementById("img52");
+	var img53 = document.getElementById("img53");
+	var img54 = document.getElementById("img54");
+	var img55 = document.getElementById("img55");
+	var linear = document.getElementById("linear");
+	img11.style.width = width + "px";
+	img11.style.height = height + "px";
+	img21.style.width = width + "px";
+	img21.style.height = height + "px";
+	img32.style.height = height / 2 + "px";
+	img32.style.width = img32.style.height;
+	img33.style.height = height / 2 + "px";
+	img33.style.width = img33.style.height;
+	img31.style.height = height + "px";
+	img31.style.width = width - parseInt(img32.style.width) + "px";
+	img41.style.width = width / 2 + "px";
+	img41.style.height = height / 2 + "px";
+	img42.style.width = width / 2 + "px";
+	img42.style.height = height / 2 + "px";
+	img43.style.width = width / 2 + "px";
+	img43.style.height = height / 2 + "px";
+	img44.style.width = width / 2 + "px";
+	img44.style.height = height / 2 + "px";
+	img51.style.width = width * 2 / 3 + "px";
+	img51.style.height = height * 2 / 3 + "px";
+	img52.style.width = width / 3 + "px";
+	img52.style.height = img52.style.width;
+	img53.style.width = width / 3 + "px";
+	img53.style.height = height / 3 + "px";
+	img54.style.width = width / 3 + "px";
+	img54.style.height = height / 3 + "px";
+	img55.style.width = width / 3 + "px";
+	img55.style.height = height - parseInt(img52.style.height) + "px";
+	img61.style.width = width * 2 / 3 + "px";
+	img61.style.height = height * 2 / 3 + "px";
+	img62.style.width = width / 3 + "px";
+	img62.style.height = height / 3 + "px";
+	img63.style.width = width / 3 + "px";
+	img63.style.height = height / 3 + "px";
+	img64.style.width = width / 3 + "px";
+	img64.style.height = height / 3 + "px";
+	img65.style.width = width / 3 + "px";
+	img65.style.height = height / 3 + "px";
+	img66.style.width = width / 3 + "px";
+	img66.style.height = height / 3 + "px";
+	//标准浏览器
+	var deg = 180 - Math.atan(height / (width / 3)) * 180 / Math.PI;
+	linear.style.webkitMaskImage = "linear-gradient(" + deg  + "deg, transparent 50%, white 50%)";
+	/*
+	-webkit-非标准浏览器与标准浏览器间的线性渐变的角度关系为：-webkit-浏览器 = 90deg - 标准浏览器，如-webkit-linear-gradient(90deg, red, blue) = linear-gradient(0deg, red, blue)
+	-webkit-非标准浏览器：
+	var deg = 360 - Math.atan((width / 3) / height) * 180 / Math.PI;
+	linear.style.webkitMaskImage = "-webkit-linear-gradient(" + deg  + "deg, transparent 50%, white 50%)";
+	*/
+}

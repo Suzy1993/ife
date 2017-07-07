@@ -1,0 +1,51 @@
+/*
+错误代码：
+row的宽度将按col的比例划分给各个col
+由于margin不属于划分宽度的范畴
+为col设置margin会占用row的宽度
+会导致划分的各个col在row中不能完全装下
+因此坚决不能为col保持height:50px并设置margin:10px，而应该增大height:70px并设置padding:10px
+说明：col的padding:0是为了去掉col默认的15px的padding-left和padding-right
+body{
+    border:1px solid #999;
+	padding:10px;
+}
+.row{
+	margin:0;
+}
+[class*='col-']{
+    height:50px;
+    margin:10px;
+	padding:0;
+}
+.content{
+    border:1px solid #999;
+    background-color:#eee;
+    height:50px;
+}
+*/
+
+/*
+正确代码：
+保证row的宽度按col的比例划分给各个col，由于padding属于划分宽度的范畴，所以可以通过padding实现间距，
+*/
+body{
+    border:1px solid #999;
+	/*body与row的间距本应该为20px，但由于col也有10px的padding，所以body的padding只需设为10px即可*/
+	padding:10px;
+}
+.row{
+	/*row默认有margin-left和margin-right，均为-15px，去掉默认的margin*/
+	margin:0;
+}
+[class*='col-']{
+    float:left;
+	/*左右padding都为10px，height为70px，则内容content高度为50px*/
+    height:70px;
+    padding:10px;
+}
+.content{
+    border:1px solid #999;
+    background-color:#eee;
+    height:50px;
+}

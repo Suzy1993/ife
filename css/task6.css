@@ -1,0 +1,310 @@
+#news{
+	width:980px;
+	height:1386px;
+	/*news和line1的宽度差的一半：(980-892)/2=44*/
+	margin-right:44px;
+}
+#title{
+	width:110px;
+	height:61px;
+	background:red;
+	float:left;
+	margin-left:44px;
+}
+#time{
+	/*为了text能设置position:absolute;right:0;bottom:0*/
+	position:relative;
+	width:110px;
+	height:61px;
+	float:right;
+	margin-right:44px;
+}
+#text{
+	width:110px;
+	/*text相对于设置了position:relative的父元素time定位,位于其右下角*/
+	position:absolute;
+	right:0;
+	bottom:0;
+	/*设置text文字右对齐*/
+	text-align:right;
+}
+#line1{
+	/*清除title和time带来的浮动*/
+	clear:both;
+	width:892px;
+	height:2px;
+	background:#938e8c;
+	/*设置左右居中，下边距为20px*/
+	margin:0 auto 20px auto;
+}
+#img{
+	/*为了zindex1和zindex2能设置position:absolute进行定位*/
+	position:relative;
+	width:641px;
+	height:301px;
+	background:url('../images/task6_1.png');
+	float:left;
+	margin-left:44px;
+	margin-right:48px;
+}
+#zindex1{
+	width:191px;
+	height:301px;
+	/*相对于设置了position:relative的父元素img定位,位于其左边*/
+	position:absolute;
+	left:0;
+	background:green;
+	/*设置背景色半透明*/
+	opacity:0.5;
+}
+#zindex2{
+	width:191px;
+	height:301px;
+	/*相对于设置了position:relative的父元素img定位,位于其右边*/
+	position:absolute;
+	right:0;
+	background:pink;
+	/*设置背景色半透明*/
+	opacity:0.5;
+}
+#line2{
+	width:203px;
+	height:2px;
+	background:#cc8091;
+	float:right;
+	margin-right:44px;
+}
+#texts{
+	/*为了one5能设置position:absolute进行定位*/
+	position:relative;
+	width:203px;
+	height:299px;
+	float:left;
+}
+#one1,#one2{
+	/*根据各自的内容自适应宽度，以便根据宽度设置下划线的长度*/
+	width:auto;
+	color:#000000;
+	font-family:Microsoft YaHei;
+	/*需要设置float:left，width:auto才有效*/
+	float:left;
+}
+#one1 span,#one2 span{
+	/*首字母放大*/
+	font-size:24px;
+}
+#underline1,#underline2{
+	/*由于首字母变大后，首字母的下划线也会变粗，因此需要自定义下划线*/
+    border-bottom: 2px solid grey;
+}
+.clear{
+	/*由于one1和one2设置了float，因此清除浮动后underline1和underline2才能正常显示*/
+	clear:both;
+}
+#one3{
+	width:100%;
+}
+#one5{
+	/*相对于设置了position:relative的父元素texts定位,位于其最下面*/
+	position:absolute;
+	bottom:0;
+	width:auto;
+}
+#one6{
+	/*相对于设置了position:relative的父元素texts定位,位于其最下面*/
+	position:absolute;
+	bottom:0;
+	right:40px;
+	height:55px;
+}
+#frames{
+	float:left;
+	margin-left:44px;
+	margin-top:44px;
+}
+#frames p{
+	/*为What、When、How添加下划线，并清除上边距*/
+	margin-top:0;
+	text-decoration:underline;
+}
+#what{
+	width:225px;
+	height:180px;
+	margin-right:20px;
+	float:left;
+}
+#when{
+	width:205px;
+	height:180px;
+	margin-right:20px;
+	float:left;
+}
+#how{
+	width:171px;
+	height:180px;
+	float:left;
+}
+#how div{
+	margin-bottom:5px;
+}
+.percent{
+	color:#cd4a48;
+	font-size:12px;
+	font-family:Microsoft YaHei;
+	font-style:italic;
+	/*设置不透明度*/
+	opacity:0.7;
+}
+#content{
+	/*为了rightBottom能设置position:absolute进行定位*/
+	position:relative;
+	float:left;
+	width:415px;
+	margin-left:44px;
+	margin-top:44px;
+}
+#content img{
+	float:right;
+}
+#contentLine{
+	width:415px;
+	height:2px;
+	background:#cc8091;
+	float:left;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#firstLetter:first-letter{
+	/*实现首字放大下沉，并占据多行*/
+	display:block;
+	float:left;
+	font-size:68px;
+	color:#f5e327;
+	font-family:Microsoft YaHei;
+}
+#pContent p{
+	/*去除段落间的默认边距*/
+	margin:0;
+	/*实现段落的首行缩进*/
+	text-indent:2em;
+}
+#empty{
+	/*设置右浮动的空div，宽度设为1px，把图片挤到相应位置*/
+	float:right;
+	width:1px;
+}
+#imageDiv{
+	/*设置图片右浮动*/
+	float:right;
+	/*清楚右浮动对图片的影响*/
+	clear:right;
+	margin:10px;
+}
+#rightImg{
+	/*为了imgTitle能设置position:absolute进行定位*/
+	position:relative;
+	width:458px;
+	height:275px;
+	float:right;
+	margin-right:44px;
+	margin-top:44px;
+}
+#imgTitle{
+	/*相对于设置了position:relative的父元素rightImg定位,位于其最下面*/
+	position:absolute;
+	bottom:0;
+	width:458px;
+	height:61px;
+	background:black;
+	/*设置不透明度*/
+	opacity:0.5;
+}
+#highLine{
+	width:3px;
+	height:44px;
+	background:#72b16a;
+	margin-left:30px;
+	/*设置highLine垂直居中*/
+	margin-top:8.5px;
+	float:left;
+}
+#textContent{
+	height:44px;
+	/*设置文字垂直居中*/
+	line-height:44px;
+	/*设置textContent垂直居中*/
+	margin-top:8.5px;
+	margin-left:8.5px;
+	float:left;
+}
+#rightBottom{
+	/*相对于设置了position:relative的父元素content定位,与rightImg最下面对齐，与rightImg最左边对齐*/
+	position:absolute;
+	bottom:0;
+	left:434px;
+	background:#938e8c;
+	width:458px;
+	height:318px;
+}
+.list{
+	/*设置段路间距为20px*/
+	margin:20px;
+	/*设置文字两端对齐*/
+	text-align:justify;
+}
+#bottom{
+	width:260px;
+	height:160px;
+	background:grey;
+	/*相对于设置了position:absolute的父元素rightBottom定位,位于其左下角*/
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+#zero{
+	float:left;
+	font-size:110px;
+	color:#ffffff;
+	font-family:Microsoft YaHei;
+	margin-left:5px;
+}
+#shuxian{
+	float:left;
+	/*设置shuxian垂直居中*/
+	margin-top:37px;
+	margin-left:5px;
+	width:2px;
+	height:86px;
+	background:#ffffff;
+}
+#two{
+	float:left;
+	/*设置two垂直居中*/
+	margin-top:37px;
+	margin-left:5px;
+	height:86px;
+	width:170px;
+}
+#helloworld{
+	/*相对于设置了position:absolute的父元素rightBottom定位,位于其右下角*/
+	position:absolute;
+	bottom:0;
+	left:260px;
+	width:179px;
+	height:140px;
+	/*设置内边距为10px*/
+	padding:10px;
+}
+#end{
+	width:892px;
+	height:1px;
+	background:#938e8c;
+	float:left;
+	margin-left:44px;
+	margin-top:30px;
+}
+#foot{
+	/*设置脚注与end右对齐*/
+	float:right;
+	margin-right:44px;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<title>任务七：实现常见的技术产品官网的页面架构及样式布局</title>
+		<link rel="stylesheet" type="text/css" href="css/task7.css">
+		<link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#circleContent').carousel({interval:5000});//每隔5秒自动轮播
+				var oCityDiv = $("#search").find("form").find("div");
+				oCityDiv.mouseover(function(event){//鼠标移入时的事件
+					var event = event || window.event;
+					var target = event.target || event.srcElement;
+					var _this = $(this);
+					if(target.nodeName.toLowerCase() == 'li'){
+						_this.find('li').css('display','block');//显示所有的li
+						_this.find('li').click(function(){//点击某个li则将其内容填入active的li的内容
+							var _li = $(this);
+							var iCur = _li.text();
+							_this.find('.active').text(iCur);
+						});
+					}
+					_this.mouseout(function(event){//鼠标移出时的事件
+						var event = event || window.event;
+						var target = event.target || event.srcElement;
+						if(target.nodeName.toLowerCase() == 'li')
+							_this.find('li').not('.active').css('display','none');//隐藏除了active的li以外的所有li
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="total">
+			<div id="logo"></div>
+			<div id="title">新世界</div>
+			<ul id="lists">
+				<li><a>首页</a></li>
+				<li><a>最新活动</a></li>
+				<li><a>项目介绍</a></li>
+				<li><a>爱心社区</a></li>
+				<li><a>关于我们</a></li>
+				<li><a>登录</a></li>
+			</ul>
+			<div id="page">
+				<div id="lead">
+					<span id="English">Time of new life</span><br>
+					<span class="Chinese">新时代，年轻的人们让我们一起</span><br>
+					<span class="Chinese">体验新生活，享受新生活</span><br>
+					<div id="button">开始体验</div>
+				</div>
+			</div>
+			<div class="icon"><img src="images/task7_3.png"></div>
+			<div class="icon"><img src="images/task7_4.png"></div>
+			<div class="icon"><img src="images/task7_5.png"></div>
+			<div class="icon"><img src="images/task7_6.png"></div>
+			<div class="classes">打造全新世界观，让你更爱你的生活</div>
+			<div class="line"></div>
+			<div class="classes">丰富多彩的公益活动，发挥新世界的主人公意识</div>
+			<div class="line"></div>
+			<div class="classes">时尚的新理念，超前体验未知的生活</div>
+			<div class="line"></div>
+			<div class="classes">完善的培养机制，培养你全新的世界观</div>
+			<div id="question">
+				<img id="img" src="images/task7_7.png">
+				<div id="content">关于新世界，你不知道的还有什么？</div>
+				<div id="search">
+					<div class="subtitle">查找新世界城市活动信息</div>
+					<div class="subline"></div>
+					<div class="subtext">每个城市有不同的活动信息，请自助查询您所需要了解的城市</div>
+					<form action="" method="post">
+						<div class="country">
+							<ul>
+								<li class="active">国家</li>
+								<li>中国</li>
+								<li>日本</li>
+								<li>泰国</li>
+							</ul>
+						</div>
+						<div class="province">
+							<ul>
+								<li class="active">省份</li>
+								<li>浙江</li>
+								<li>广东</li>
+								<li>海南</li>
+							</ul>
+						</div>
+						<div class="city">
+							<ul>
+								<li class="active">城市</li>
+								<li>南京</li>
+								<li>杭州</li>
+								<li>广州</li>
+								<li>深圳</li>
+								<li>海口</li>
+								<li>三亚</li>
+							</ul>
+						</div>
+						<input type="submit" value="搜&nbsp;&nbsp;&nbsp;索"/>
+					</form>
+				</div>
+				<div class="activities" id="beijing">
+					<img class="images" src="images/task7_10.png">
+					<span class="city">北京活动</span><br>
+					<span class="style">新社区大联盟</span>	
+				</div>
+				<div class="activities">
+					<span id="special">上&nbsp;&nbsp;&nbsp;&nbsp;海&nbsp;&nbsp;&nbsp;&nbsp;活&nbsp;&nbsp;&nbsp;&nbsp;动</span><br>
+					<span class="style">夜上海新景观探索</span><br>	
+					<img id="shanghai" src="images/task7_10.png">
+				</div>
+				<div class="activities">
+					<img class="images" src="images/task7_10.png">
+					<span class="city">深圳活动</span><br>
+					<span class="style">全新海岸线观景站</span>	
+				</div>
+				<div class="activities">
+					<img class="images" src="images/task7_10.png">
+					<span class="city">香港活动</span><br>
+					<span class="style">奢侈消费大派送</span>	
+				</div>
+			</div>
+			<div id="circleImg"></div>
+			<div id="circleContent" class="carousel slide">
+				<!-- 轮播（Carousel）指标 -->
+				<ol class="carousel-indicators">
+					<!-- 使用data-slide-to来向轮播传递一个原始滑动索引，data-slide-to将把滑块移动到一个特定的索引，索引从0开始计数 -->
+					<li data-target="#circleContent" data-slide-to="0" class="active"></li>
+					<li data-target="#circleContent" data-slide-to="1"></li>
+					<li data-target="#circleContent" data-slide-to="2"></li>
+				</ol>   
+				<!-- 轮播（Carousel）项目 -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="circleText">
+							<div class="circleTitle">新世界/01</div>
+							<div class="circleDiv">新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</div>
+							<div class="circleDetail">更多详情</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="circleText">
+							<div class="circleTitle">新世界/02</div>
+							<div class="circleDiv">新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</div>
+							<div class="circleDetail">更多详情</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="circleText">
+							<div class="circleTitle">新世界/03</div>
+							<div class="circleDiv">新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</div>
+							<div class="circleDetail">更多详情</div>
+						</div>
+					</div>
+				</div>
+				<!-- 轮播（Carousel）导航 -->
+				<!-- data-slide接受关键字prevent或next，用来改变幻灯片相对于当前位置的位置 -->
+				<a class="carousel-control left" href="#circleContent" data-slide="prevent">&lsaquo;</a>
+				<a class="carousel-control right" href="#circleContent" data-slide="next">&rsaquo;</a>
+			</div>
+			<div class="more" id="first">
+				<div class="in">
+					<span id="redMore">新时代<br>关于爱生活的我们<br><span>
+					<div class="inLine"></div>
+					<div id="lookForOne">查看更多</div>
+				</div>
+			</div>
+			<div class="more">
+				<div class="in">
+					<span id="redMore">新时代<br>关于爱生活的我们<br><span>
+					<div class="inLine" id="second"></div>
+					<div id="lookForTwo">查看更多</div>
+				</div>
+			</div>
+			<div id="rightImg">
+			</div>
+			<div id="ad">
+				<div class="subtitle">成为我们的志愿者</div>
+				<div class="subline"></div>
+				<div class="subtext">新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情<br>那就不要犹豫，快来加入我们，成为改变所有人生活的人</div>
+			</div>
+			<div id="more">
+				<p>新世界志愿者协议</p>
+				<div class="ellipsis">加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并且本着平等资源的原则。加入新世界志愿者的人员必须遵守中华人民共和国的相关法律法规，并且本着平等资源的原则。</div>
+				<div class="moreInfo">more</div>
+				<p>新世界志愿者权利</p>
+				<div class="ellipsis">新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格。</div>
+				<div class="moreInfo">more</div>
+				<p>更多条款</p>
+				<div class="moreInfo">more</div>
+			</div>
+			<div id="register">
+				<form>
+					<div class="forms">姓名：<input type="text"></div>
+					<div class="forms">年龄：<input type="text"></div>
+					<div class="forms">联系方式：<input type="text"></div>
+					<div class="forms">联系地址：<input type="text"></div>
+					<div id="textarea">请简单描述您梦想的生活：<br><textarea></textarea></div>
+					<input type="submit" value="提交申请">
+				</form>
+			</div>
+			<div id="contact">
+				<div class="subtitle">联系我们</div>
+				<div class="subtext">为了更好地获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯<br>也可以通过以下任何方式关注我们的动态</div>
+				<form>
+					<input type="text" placeholder="someone.email.com">
+					<input type="submit" value="提交">
+				</form>
+				<div id="ways">
+					<img src="images/task7_14.png">
+					<img src="images/task7_15.png">
+					<img src="images/task7_16.png">
+				</div>
+			</div>
+			<div id="foot">
+				@2016新世界
+				<div>Back to top</div>
+			</div>
+		</div>
+	</body>
+</html>

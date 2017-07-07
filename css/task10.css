@@ -1,0 +1,49 @@
+body{
+	/*设置所有padding为20px*/
+	padding:20px;
+	/*去掉body默认的margin*/
+	margin:0;
+}
+/*不能直接将body作为父元素，因为body默认最后的一个子元素是<div id="TK-log">...</div>*/
+#container{
+	/*将容器container指定为Flex布局*/
+	display:flex;
+	/*定义项目在主轴上的对齐方式：两端对齐，项目之间的间隔都相等*/
+	justify-content:space-between;
+	/*定义项目在交叉轴上的对齐方式：居中*/
+	align-items:center;
+}
+.flexbox{
+	width:150px;
+	border:1px solid #f00;
+}
+#first{
+	height:120px;
+}
+#second{
+	height:100px;
+}
+#third{
+	height:40px;
+}
+#fourth{
+	height:200px;
+	border-color:#0f0;
+}
+@media screen and (max-width:640px){
+	#container{
+		display:flex;
+		/*如果一条轴线排不下，则换行*/
+		flex-wrap:wrap;
+		/*定义项目在交叉轴上的对齐方式：与交叉轴的起点对齐*/
+		align-items:flex-start;
+	}
+	.flexbox{
+		/*设置容器的元素之间的下边距为20px*/
+		margin-bottom:20px;
+	}
+	#fourth{
+		/*定义项目的排列顺序。数值越小，排列越靠前，默认为0，第四个元素排在最前面*/
+		order:-1;
+	}
+}

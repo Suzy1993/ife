@@ -1,0 +1,245 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta http-equiv="charset" content="utf-8">
+		<title>任务九：使用HTML/CSS实现一个复杂页面</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/task9.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/task9.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.datetimepicker.js"></script>
+	</head>
+	<body>
+		<div id="total">
+			<header>
+				<img id="logo" src="images/task9_1.gif">
+				<div id="login">
+					<form action="" method="get">
+						<input type="text">
+					</form>
+					<div id="text">登录</div>
+				</div>
+			</header>
+			<aside>
+				<div id="image">ING</div>
+				<div id="save">123<br>收藏</div>
+				<div class="line"></div>
+				<div id="fans">23<br>粉丝</div>
+				<div id="menu">
+					<ul class="types">
+						<li class="type"><span>个人报表</span>
+							<ul class="files">
+								<li class="file">	
+									<span>文件1-1</span>
+									<ul><li class="document"><a href="#">文档1-1-1</a></li><li class="document"><a href="#">文档1-1-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件1-2</span>
+									<ul><li class="document"><a href="#">文档1-2-1</a></li><li class="document"><a href="#">文档1-2-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件1-3</span>
+									<ul><li class="document"><a href="#">文档1-3-1</a></li><li class="document"><a href="#">文档1-3-2</a></li></ul>
+								</li>
+							</ul>
+						</li>
+						<li class="type"><span>个人收藏</span>
+							<ul class="files">
+								<li class="file">
+									<span>文件2-1</span>
+									<ul><li class="document"><a href="#">文档2-1-1</a></li><li class="document"><a href="#">文档2-1-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件2-2</span>
+									<ul><li class="document"><a href="#">文档2-2-1</a></li><li class="document"><a href="#">文档2-2-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件2-3</span>
+									<ul><li class="document"><a href="#">文档2-3-1</a></li><li class="document"><a href="#">文档2-3-2</a></li></ul>
+								</li>
+							</ul>
+						</li>
+						<li class="type"><span>我的分享</span>
+							<ul class="files">
+								<li class="file">
+									<span>文件3-1</span>
+									<ul><li class="document"><a href="#">文档3-1-1</a></li><li class="document"><a href="#">文档3-1-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件3-2</span>
+									<ul><li class="document"><a href="#">文档3-2-1</a></li><li class="document"><a href="#">文档3-2-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件3-3</span>
+									<ul><li class="document"><a href="#">文档3-3-1</a></li><li class="document"><a href="#">文档3-3-2</a></li></ul>
+								</li>
+							</ul>
+						</li>
+						<li class="type"><span>图库</span>
+							<ul class="files">
+								<li class="file">
+									<span>文件4-1</span>
+									<ul><li class="document"><a href="#">文档4-1-1</a></li><li class="document"><a href="#">文档4-1-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件4-2</span>
+									<ul><li class="document"><a href="#">文档4-2-1</a></li><li class="document"><a href="#">文档4-2-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件4-3</span>
+									<ul><li class="document"><a href="#">文档4-3-1</a></li><li class="document"><a href="#">文档4-3-2</a></li></ul>
+								</li>
+							</ul>
+						</li>
+						<li class="type"><span>成长记录</span>
+							<ul class="files">
+								<li class="file">
+									<span>文件5-1</span>
+									<ul><li class="document"><a href="#">文档5-1-1</a></li><li class="document"><a href="#">文档5-1-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件5-2</span>
+									<ul><li class="document"><a href="#">文档5-2-1</a></li><li class="document"><a href="#">文档5-2-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件5-3</span>
+									<ul><li class="document"><a href="#">文档5-3-1</a></li><li class="document"><a href="#">文档5-3-2</a></li></ul>
+								</li>
+							</ul>
+						</li>
+						<li class="type"><span>账户信息</span>
+							<ul class="files">
+								<li class="file">
+									<span>文件6-1</span>
+									<ul><li class="document"><a href="#">文档6-1-1</a></li><li class="document"><a href="#">文档6-1-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件6-2</span>
+									<ul><li class="document"><a href="#">文档6-2-1</a></li><li class="document"><a href="#">文档6-2-2</a></li></ul>
+								</li>
+								<li class="file">
+									<span>文件6-3</span>
+									<ul><li class="document"><a href="#">文档6-3-1</a></li><li class="document"><a href="#">文档6-3-2</a></li></ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>	
+			</aside>
+			<div id="title">C站&nbsp;/&nbsp;个人报表&nbsp;/&nbsp;文件1.1&nbsp;/&nbsp;文档1-1-1</div>
+			<article>
+				<div id="search">
+					<form action="" method="get">
+						<div id="searchText">
+							查询项&nbsp;&nbsp;<select class="short"><option value="第一项">第一项</option><option value="第二项">第二项</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+							买方&nbsp;&nbsp;<select class="long"><option value="Alice">Alice</option><option value="Bruce">Bruce</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+							日期&nbsp;&nbsp;<input id="datetimepicker" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+							总耗时&nbsp;&nbsp;<select class="short"><option value="5天">5天</option><option value="6天">6天</option></select><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							卖方&nbsp;&nbsp;<select class="long"><option value="Cindy">Cindy</option><option value="David">David</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+							人数&nbsp;&nbsp;<select class="short"><option value="5人">5人</option><option value="6人">6人</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+							成交项&nbsp;&nbsp;<select><option value="5项">5项</option><option value="6项">6项</option></select>&nbsp;&nbsp;&nbsp;&nbsp;
+						</div>
+						<input type="submit" value="搜索">
+					</form>
+				</div>
+				<div id="last"><</div>
+				<div class="money">10:00&nbsp;am<br><font class="redFont">￥1000</font></div>
+				<div class="money">11:00&nbsp;am<br><font class="redFont">￥1100</font></div>
+				<div class="money">12:00&nbsp;am<br><font class="redFont">￥1200</font></div>
+				<div class="money">13:00&nbsp;am<br><font class="redFont">￥1300</font></div>
+				<div id="next">></div>
+				<div id="history">历史查询</div>
+				<div id="subtitle">2016年4月份统计</div>
+				<div id="statistic">
+					<div class="boxes"><div class="count">1111<br>成交量</div><div class="background"></div></div>
+					<div class="boxes"><div class="count">2222<br>成交量</div><div class="background"></div></div>
+					<div class="boxes"><div class="count">3333<br>成交量</div><div class="background"></div></div>
+					<div class="boxes"><div class="count">4444<br>成交量</div><div class="background"></div></div>
+				</div>
+				<div id="tab">
+					<div class="highLine">第一组项目</div>
+					<div id="tabs">
+						<ul>
+							<li name="item1">项目一</li>
+							<li name="item2">项目二</li>
+							<li name="item3">项目三</li>
+							<li name="item4">项目四</li>
+							<li name="item5">项目五</li>
+						</ul>
+						<div class="item" id="item1">
+							<table border="1">
+								<tr><td>材料1-1</td><td>材料1-2</td><td>材料1-3</td><td>材料1-4</td></tr>
+								<tr><td>材料1-5</td><td>材料1-6</td><td>材料1-7</td><td>材料1-8</td></tr>
+								<tr><td>材料1-9</td><td>材料1-10</td><td>材料1-11</td><td>材料1-12</td></tr>
+								<tr><td>材料1-13</td><td>材料1-14</td><td>材料1-15</td><td>材料1-16</td></tr>
+							</table>
+						</div>
+						<div class="item" id="item2">
+							<table border="1">
+								<tr><td>材料2-1</td><td>材料2-2</td><td>材料2-3</td><td>材料2-4</td></tr>
+								<tr><td>材料2-5</td><td>材料2-6</td><td>材料2-7</td><td>材料2-8</td></tr>
+								<tr><td>材料2-9</td><td>材料2-10</td><td>材料2-11</td><td>材料2-12</td></tr>
+								<tr><td>材料2-13</td><td>材料2-14</td><td>材料2-15</td><td>材料2-16</td></tr>
+							</table>
+						</div>
+						<div class="item" id="item3">
+							<table border="1">
+								<tr><td>材料3-1</td><td>材料3-2</td><td>材料3-3</td><td>材料3-4</td></tr>
+								<tr><td>材料3-5</td><td>材料3-6</td><td>材料3-7</td><td>材料3-8</td></tr>
+								<tr><td>材料3-9</td><td>材料3-10</td><td>材料3-11</td><td>材料3-12</td></tr>
+								<tr><td>材料3-13</td><td>材料3-14</td><td>材料3-15</td><td>材料3-16</td></tr>
+							</table>
+						</div>
+						<div class="item" id="item4">
+							<table border="1">
+								<tr><td>材料4-1</td><td>材料4-2</td><td>材料4-3</td><td>材料4-4</td></tr>
+								<tr><td>材料4-5</td><td>材料4-6</td><td>材料4-7</td><td>材料4-8</td></tr>
+								<tr><td>材料4-9</td><td>材料4-10</td><td>材料4-11</td><td>材料4-12</td></tr>
+								<tr><td>材料4-13</td><td>材料4-14</td><td>材料4-15</td><td>材料4-16</td></tr>
+							</table>
+						</div>
+						<div class="item" id="item5">
+							<table border="1">
+								<tr><td>材料5-1</td><td>材料5-2</td><td>材料5-3</td><td>材料5-4</td></tr>
+								<tr><td>材料5-5</td><td>材料5-6</td><td>材料5-7</td><td>材料5-8</td></tr>
+								<tr><td>材料5-9</td><td>材料5-10</td><td>材料5-11</td><td>材料5-12</td></tr>
+								<tr><td>材料5-13</td><td>材料5-14</td><td>材料5-15</td><td>材料5-16</td></tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="details">
+					<div class="highLine">第一组项目</div>
+					<div id="itemTitle"><span class="opacity">标题</span><br>项目报表一</div>
+					<div id="price"><span class="opacity">价格</span><br>￥200</div>
+					<div id="duty"><span class="opacity">负责人</span><br>小A</div>
+					<div id="description"><span class="opacity">详细描述</span><br>该项目目前负责人是</div>
+					<form action="" method="get">
+						<input type="radio">遵守保密协议
+						<input type="submit" value="搜索">
+					</form>
+				</div>
+				<div id="calendar">
+					<div class="highLine">日历</div>
+				</div>
+				<div id="sort">
+					<div class="highLine">汽车行业排行榜</div>
+					<div id="rank">
+						<table border="1">
+							<tr><th>排名</th><th>品牌</th><th>搜索指数</th></tr>
+							<tr><td>1</td><td>奔驰</td><td>66<div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width:66%"></div></div></td></tr>
+							<tr><td>1</td><td>大众</td><td>55<div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width:55%"></div></div></td></tr>
+							<tr><td>2</td><td>丰田</td><td>44<div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" style="width:44%"></div></div></td></tr>
+							<tr><td>3</td><td>奥迪</td><td>33<div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width:33%"></div></div></td></tr>
+							<tr><td>4</td><td>本田</td><td>22<div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" style="width:22%"></div></div></td></tr>
+							<tr><td>5</td><td>福特</td><td>11<div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100" style="width:11%"></div></div></td></tr>
+						</table>
+					</div>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>

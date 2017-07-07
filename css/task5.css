@@ -1,0 +1,125 @@
+header{
+	background:black;
+	height:50px;
+}
+header ul{
+	/*ul默认display:block*/
+	/*ul与前一个相邻元素在同一行显示*/
+	float:right;
+	/*ul默认padding-left:40px，margin-top:16px，margin-bottom:16px*/
+	/*去掉ul默认的margin*/
+	margin:0;
+}
+header li{
+	/*li垂直居中显示*/
+	height:50px;
+	line-height:50px;
+	/*li默认display:list-item*/
+	/*li在同一行显示*/
+	display:inline;
+}
+a{
+	/*去掉链接的下划线*/
+	text-decoration:none;
+}
+article{
+	background:grey;
+	height:auto;
+	padding:30px;
+	float:left;
+}
+section{
+	width:68%;
+	float:left;
+}
+.block{
+	margin-bottom:30px;
+	padding:30px;
+	background:white;
+	height:auto;
+}
+.block:last-child{
+	/*设置最后一块无下外边距*/
+	margin-bottom:0;
+}
+.clear{
+	/*清除浮动，让父元素的背景显示出来*/
+	clear:both;
+}
+p{
+	/*去掉p默认的margin*/
+	margin:0;
+}
+.block ul li{
+	/*去掉默认的小圆点*/
+	list-style:none;
+}
+.images{
+	border:1px solid grey;
+	width:180px;
+	height:150px;
+	margin:20px 20px 20px 0;
+	text-align:center;
+	float:left;
+}
+.imgTitle{
+	text-align:center;
+	height:35px;
+	line-height:35px;
+}
+table{
+	width:100%;
+	/*合并边框*/
+	border-collapse:collapse;
+}
+/*选择器：第一个tr即表头*/
+tr:first-child{
+	/*th默认居中*/
+	/*使th左对齐*/
+	text-align:left;
+	background:black;
+	color:white;
+}
+input,select,textarea{
+	margin-bottom:10px;
+}
+label{
+	/*label默认display:inline设置width无效*/
+	/*label设置float:left使得设置width有效*/
+	float:left;
+	width:130px;
+	/*对齐表单*/
+	text-align:right;
+}
+.tips{
+	width:100%;
+	/*设置提示文字div的padding为label的宽度以便与表单对齐*/
+	padding-left:130px;
+	margin-bottom:10px;
+	color:grey;
+}
+textarea{
+	width:180px;
+	height:100px;
+}
+input[type="submit"]{
+	height:30px;
+	width:100%;
+	background:blue;
+	color:white;
+	border-radius:10px;
+}
+aside{
+	width:25%;
+	background:white;
+	height:auto;
+	float:right;
+	padding:30px;
+}
+footer{
+	background:black;
+	height:50px;
+	text-align:center;
+	color:white;
+	line-height:50px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务十九：基础JavaScript练习（二）</title>
+		<style>
+			#boxes{
+				border:1px solid grey;
+				width:1320px;
+				height:300px;
+				margin-top:10px;
+				position:relative;
+			}
+			.box{
+				background:red;
+				width:20px;
+				line-height:30px;
+				text-align:center;
+				font-family:Microsoft Yahei;
+				font-size:15px;
+				color:white;
+				margin:0 1px;
+				position:absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" id="text">
+		<input type="button" value="左侧入" onclick="left_in()">
+		<input type="button" value="右侧入" onclick="right_in()">
+		<input type="button" value="左侧出" onclick="left_out()">
+		<input type="button" value="右侧出" onclick="right_out()">
+		<input type="button" value="冒泡排序" onclick="sort()">
+		<div id="boxes"></div>
+		<script src="js/task19.js"></script>
+	</body>
+</html>

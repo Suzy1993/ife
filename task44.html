@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>任务四十四：多功能相册之瀑布布局</title>
+        <style>
+            .fall{
+            	/*去掉ul默认的margin和padding*/
+                margin:0;
+                padding:0;
+                width:100%;
+                position:relative;
+            }
+            .fall li{
+            	/*去掉li默认的margin和padding*/
+                margin:0;
+                padding:0;
+                position:absolute;
+            }
+            #bottom{
+				position:fixed;
+				width:100%;
+				height:100%;
+				left:0;
+				top:0;
+				/*开始时隐藏遮罩*/
+				display:none;
+				/*设置黑色遮罩的不透明度为80%*/
+				background:black;
+				opacity:0.8; 
+				/*设置遮罩位于放大的图片层的下方*/ 
+	    		z-index:1;
+            }
+            #top{
+            	width:800px;
+            	height:500px;
+            	/*设置放大的图片层的中心在屏幕正中"*/
+            	position:fixed;
+            	left:50%;
+            	top:50%;
+				margin-left:-400px;
+				margin-top:-250px;
+				/*开始时隐藏放大的图片层*/
+            	display:none;
+				/*设置放大的图片层位于最高层*/ 
+            	z-index:2;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="fall" id="myFall">
+            <li><img src="images/task44_1.jpg"></li>
+            <li><img src="images/task44_2.jpg"></li>
+            <li><img src="images/task44_3.jpg"></li>
+            <li><img src="images/task44_4.jpg"></li>
+            <li><img src="images/task44_5.jpg"></li>
+            <li><img src="images/task44_6.jpg"></li>
+            <li><img src="images/task44_7.jpg"></li>
+            <li><img src="images/task44_8.jpg"></li>
+            <li><img src="images/task44_9.jpg"></li>
+            <li><img src="images/task44_10.jpg"></li>
+        </ul>
+        <div id="bottom"></div>
+        <div id="top"></div>
+		<script src="js/task44.js"></script>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务四十二：UI组件之日历组件（三）</title>
+		<style>
+			*{
+				font-family:Microsoft Yahei;
+				font-size:15px;
+			}
+			#calendar{
+				margin-top:30px;
+				border:1px solid grey;
+				width:380px;
+				height:320px;
+				margin:5px;
+			}
+			#head{
+				width:100%;
+				height:45px;
+				background:#eeeeee;
+			}
+			#left{
+				float:left;
+				margin-top:15px;
+				margin-left:15px;
+				cursor:pointer;
+			}
+			#right{
+				float:right;
+				margin-top:15px;				
+				margin-right:15px;
+				cursor:pointer;
+			}
+			select{
+				margin:5px;
+				width:60px;
+				height:25px;
+				margin-top:10px;
+			}
+			input{
+				margin:5px;
+			}
+			th, td{
+				width:50px;
+				height:30px;
+				text-align:center;
+				cursor:pointer;
+			}
+			#certain, #cancel{
+				height:25px;
+				margin-right:20px;
+				float:right;
+				display:none;
+			}
+		</style>
+	</head>
+	<body>
+		<select id="changeYear"></select>
+		<select id="changeMonth"></select>
+		<select id="changeDay"></select>
+		<button>切换到指定日期</button><br>
+		选择一个日期<input type="text" id="date"><br>
+		选择一段日期<input type="text" id="dateBegin">-<input type="text" id="dateEnd">
+		<div id="calendar" style="display:none"><!--必须设置为直接式CSS样式才有效-->
+			<div id="head">
+				<img id="left" src="images/task42_1.png">
+				<img id="right" src="images/task42_2.png">
+				<select id="month"></select>
+				<select id="year"></select>
+			</div>
+			<table>
+				<tr>
+					<th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+			</table>
+			<button id="cancel">取消</button>
+			<button id="certain">确定</button>
+		</div>
+		<script src="js/task42.js"></script>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务四十一：UI组件之日历组件（二）</title>
+		<style>
+			*{
+				font-family:Microsoft Yahei;
+				font-size:15px;
+			}
+			input, img{ 
+				/*将input和img放同一行，img标签总是比input高出一点，可以同时给input和img添加vertical-align:middle*/
+				vertical-align:middle;
+			}
+			#calendar{
+				margin-top:30px;
+				border:1px solid grey;
+				width:380px;
+				height:285px;
+			}
+			#head{
+				width:100%;
+				height:45px;
+				background:#eeeeee;
+			}
+			#left{
+				float:left;
+				margin-top:15px;
+				margin-left:15px;
+				cursor:pointer;
+			}
+			#right{
+				float:right;
+				margin-top:15px;				
+				margin-right:15px;
+				cursor:pointer;
+			}
+			select{
+				margin:5px;
+				width:60px;
+				height:25px;
+				margin-top:10px;
+			}
+			th, td{
+				width:50px;
+				height:30px;
+				text-align:center;
+				cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<select id="changeYear"></select>
+		<select id="changeMonth"></select>
+		<select id="changeDay"></select>
+		<button>切换到指定日期</button><br>
+		<img src="images/task41_1.png"><input type="text">
+		<div id="calendar" style="display:none"><!--必须设置为直接式CSS样式才有效-->
+			<div id="head">
+				<img id="left" src="images/task41_2.png">
+				<img id="right" src="images/task41_3.png">
+				<select id="month"></select>
+				<select id="year"></select>
+			</div>
+			<table>
+				<tr>
+					<th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+			</table>
+		</div>
+		<script src="js/task41.js"></script>
+	</body>
+</html>

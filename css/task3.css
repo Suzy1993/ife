@@ -1,0 +1,57 @@
+body{
+	/*body默认有margin，不同浏览器的默认margin值不同*/
+	/*所有浏览器统一，设置body的margin:20px*/
+	margin:20px;
+}
+#out{
+	/*height默认为auto，因此可设置height:auto也可不设置*/
+	padding:20px;
+	background:#eee;
+	border:1px solid #999;
+}
+#left{
+	width:200px;
+	background:#fff;
+	/*1、左侧采用浮动float:left*/
+	float:left;
+}
+#img{
+	/*设置把图片的顶端与父元素的文字的顶端对齐*/
+	vertical-align:text-top;
+	margin:20px;
+	/*设置文字环绕图片*/
+	float:left;
+}
+#middle{
+	padding:20px;
+	background:#fff;
+	/*实现左右宽度固定，中间宽度自适应：左侧采用浮动float:left,右侧采用浮动float:right，中间采用margin-left和margin-right方法*/
+	/*2、中间的margin-left设置为左宽度200+左中间距20*/
+	/*3、中间的margin-right设置为右宽度120+右中间距20*/
+	margin-left:220px;
+	margin-right:140px;
+}
+#right{
+	width:120px;
+	background:#fff;
+	/*4、右侧采用浮动float:right*/
+	float:right;
+}
+.images{
+	/*若直接设置margin:20，由于img不是块级元素，不会发生垂直上下边距合并，相邻img之间的间距将为20+20=40px*/
+	/*1、先设置上下margin为10，左右margin为20*/
+	margin:10px 20px;
+}
+.images:first-child{
+	/*2、再设置第一个img的margin-top为20*/
+	margin-top:20px;
+}
+.images:last-child{
+	/*3、再设置最后一个img的margin-bottom为20*/
+	margin-bottom:20px;
+}
+#clear{
+	/*在将内部div设置成浮动后，外层div的背景没有显示，原因就是外层的div没有撑开，因此需要清除浮动来撑开外层的div以此显示外层div的背景*/
+	/*使用空标签清除浮动：在需清除浮动的父元素内部的所有元素后添加一个空<div>，并为其定义CSS代码clear:both*/
+	clear:both;
+}

@@ -1,0 +1,462 @@
+#total{
+	width:1300px;
+	font-family:Microsoft YaHei;
+}
+header{
+	width:100%;
+	height:60px;
+	background:blue;
+}
+#logo{
+	margin-left:50px;
+	margin-top:15px;
+}
+#login{
+	width:500px;
+	height:60px;
+	float:right;
+	text-align:center;
+}
+#login form{
+	/*表单控件默认为块级元素，设置display:inline才能使表单与其他元素放在同一行*/
+	display:inline;
+}
+#login input{
+	/*同时使用背景颜色和背景图片*/
+	background:url("../images/task9_3.png") white no-repeat 10px center;
+	/*设置文本输入内容的起始位置，以免覆盖背景图片*/
+	padding-left:30px;
+	/*input文本框默认有边框，去掉默认边框*/
+	border:0;
+	/*设置input文本框的圆角属性*/
+	border-radius:15px;
+	height:30px;
+	width:300px;
+	margin-top:15px;
+}
+#text{
+	float:right;
+	height:30px;
+	line-height:30px;
+	width:60px;
+	margin-top:15px;
+	margin-right:50px;
+	text-align:right;
+	/*为登录设置背景图片*/
+	background:url("../images/task9_2.png") no-repeat left center;
+}
+aside{
+	float:left;
+	height:1030px;
+	width:300px;
+	background:#555555;
+	color:white;
+}
+#image{
+	background:url("../images/task9_4.png") no-repeat left center;
+	width:150px;
+	height:64px;
+	text-align:right;
+	line-height:64px;
+	font-size:20px;
+	margin-left:75px;
+	margin-top:50px;
+}
+#save{
+	float:left;
+	width:98px;
+	height:30px;
+	font-size:15px;
+	margin-left:50px;
+	margin-top:50px;
+	text-align:center;
+}
+.line{
+	float:left;
+	width:2px;
+	height:30px;
+	background:black;
+	margin-top:55px;
+}
+#fans{
+	float:left;
+	width:98px;
+	height:30px;
+	font-size:15px;
+	margin-top:50px;
+	text-align:center;
+}
+#menu{
+	font-size:15px;
+	float:left;
+	width:200px;
+	height:500px;
+	margin-top:50px;
+	margin-left:50px;
+	color:#999999;
+}
+.types a{
+	text-decoration:none;
+	color:#999999;
+}
+.types a:hover{
+	text-decoration:none;
+	color:white;
+}
+.types ul,.files ul{
+	/*隐藏所有的子ul*/
+	display:none;
+}
+.type{
+	margin-top:10px;
+	margin-bottom:10px;
+	list-style-image:url(../images/task9_6.png);
+}
+.file{
+	margin-top:10px;
+	margin-bottom:10px;
+	list-style-image:url(../images/task9_8.png);
+}
+.document{
+	margin-top:10px;
+	margin-bottom:10px;
+	list-style-image:url(../images/task9_9.png);	
+}
+#title{
+	float:left;
+	width:1000px;
+	height:30px;
+	line-height:30px;
+	color:grey;
+	padding-left:20px;
+}
+article{
+	float:left;
+	width:1000px;
+	background:#dddddd;
+	color:grey;
+}
+#search{
+	padding:10px 20px;
+	float:left;
+	height:120px;
+	width:900px;
+	background:white;
+	margin: 20px 50px;
+}
+select{
+	height:25px;
+	margin:10px 0;
+}
+.short{
+	width:100px;
+}
+.long{
+	width:120px;
+}
+select:nth-child(8){
+	width:158px;
+}
+#searchText{
+	float:left;
+	height:100%;
+	width:750px;
+}
+#search input[type="submit"]{
+	background:blue;
+	height:30px;
+	width:60px;
+	margin-top:35px;
+	/*去掉按钮的默认边框*/
+	border:none;
+	/*设置按钮的圆角*/
+	border-radius:5px;
+	color:white;
+}
+#last,#next{
+	width:30px;
+	height:60px;
+	line-height:60px;
+	background:white;
+	font-size:30px;
+	text-align:center;
+}
+#last{
+	float:left;
+	margin-left:50px;
+}
+#next{
+	float:left;
+	margin-left:20px;
+	margin-right:20px;
+}
+.money{
+	padding-top:8px;
+	float:left;
+	width:135px;
+	height:60px;
+	background:white;
+	margin-left:20px;
+	text-align:center;
+}
+.redFont{
+	color:red;
+	font-size:20px;
+}
+#history{
+	float:left;
+	width:180px;
+	height:60px;
+	line-height:60px;
+	padding-right:30px;
+	text-align:right;
+	background:url("../images/task9_11.png") white no-repeat 30px center;
+}
+#subtitle{
+	float:left;
+	margin-left:50px;
+	margin-top:20px;
+	color:white;
+}
+#statistic{
+	float:left;
+	width:900px;
+	height:80px;
+	margin-left:50px;
+}
+.boxes{
+	float:left;
+	margin-left:20px;
+	width:210px;
+	height:80px;
+	border-left:5px solid green;
+	background:white;
+}
+.boxes:first-child{
+	margin-left:0;
+}
+.boxes:nth-child(2){
+	border-left:5px solid blue;
+}
+.boxes:nth-child(3){
+	border-left:5px solid pink;
+}
+.boxes:nth-child(4){
+	border-left:5px solid yellow;
+}
+.count{
+	margin-top:20px;
+	margin-left:20px;
+	width:60px;
+	height:60px;
+	float:left;
+}
+.background{
+	margin-top:10px;
+	margin-left:20px;
+	width:80px;
+	height:60px;
+	background:green;
+	float:left;
+}
+.boxes:nth-child(2) .background{
+	background:blue;
+}
+.boxes:nth-child(3) .background{
+	background:pink;
+}
+.boxes:nth-child(4) .background{
+	background:yellow;
+}
+#tab{
+	margin-top:20px;
+	margin-left:50px;
+	float:left;
+	width:500px;
+	height:300px;
+	background:white;
+	color:grey;
+	border-radius:5px;
+}
+#tabs{
+	width:460px;
+	height:250px;
+	background:white;
+	margin:20px;
+}
+#tabs ul{
+	float:left;  
+	margin:20px 0 0 20px;  
+	/*去掉ul默认的padding*/
+	padding:0; 
+}
+#tabs li{  
+	width:60px;  
+	height:40px;  
+	line-height:40px;  
+	/*li默认display:list-item*/
+	/*设置display:inline可以使li在同一行显示*/
+	/*然而设置了display:inline的元素不能设置宽高，为了能设置li的宽和高，需要设置display:inline-block*/
+	display:inline-block;  
+	text-align:center;  
+	/*为所有li设置1px的灰色边框*/
+	border-bottom:1px solid grey;
+	/*为所有li设置左上和右上的圆角*/
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	background:#eeeeee;
+	/*为所有li设置相对定位，相对其原来的位置下移1px*/
+	position:relative; 
+	top:1px;
+}  
+#tabs li:hover{
+	/*设置鼠标悬浮时的文字颜色和鼠标样式为指针状*/
+	color:#aaaaaa;
+	cursor:pointer;
+}
+#tabs .item{
+	width:420px;  
+	height:175px;  
+	font-size:16px;   
+	text-align:center;  
+	/*为所有面板设置1px的灰色边框*/
+	border:1px solid grey;  
+	float:left;
+	margin-left:20px;  
+}
+#tabs table{
+	/*设置边框合并*/
+	border-collapse:collapse;
+	margin-top:25px;
+	margin-left:20px;
+}
+#tabs td{
+	text-align:center;
+	width:94px;
+	height:30px;
+}
+#details{
+	margin-top:20px;
+	margin-left:20px;
+	float:left;
+	width:380px;
+	height:300px;
+	background:white;
+	color:grey;
+	border-radius:5px;
+}
+.opacity{
+	/*设置小标题的不透明度*/
+	opacity:0.5;
+}
+#itemTitle{
+	float:left;
+	width:340px;
+	height:45px;
+	margin-left:20px;
+	margin-top:20px;
+	border-bottom:1px solid grey;
+	padding-left:10px;
+}
+#price{
+	float:left;
+	width:100px;
+	height:45px;
+	margin-left:20px;
+	border-bottom:1px solid grey;
+	border-right:1px solid grey;
+	padding-left:10px;
+}
+#duty{
+	float:left;
+	width:239px;
+	height:45px;
+	border-bottom:1px solid grey;
+	padding-left:10px;
+}
+#description{
+	float:left;
+	width:340px;
+	height:80px;
+	margin-left:20px;
+	border-bottom:1px solid grey;
+	padding-left:10px;
+}
+#details form{
+	float:left;
+	margin-top:20px;
+	margin-left:30px;
+}
+#details form input[type="submit"]{
+	margin-left:150px;
+	width:60px;
+	height:30px;
+	background:blue;
+	color:white;
+	border:none;
+	border-radius:5px;
+}
+#calendar{
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:50px;
+	float:left;
+	width:380px;
+	height:300px;
+	background:white;
+	color:grey;
+	border-radius:5px;
+}
+#sort{
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:20px;
+	float:left;
+	width:500px;
+	height:300px;
+	background:white;
+	color:grey;
+	border-radius:5px;
+}
+.highLine{
+	float:left;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	background:#bbbbbb;
+	/*为所有小标题设置左上和右上的圆角*/
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	padding-left:20px;
+}
+#rank{
+	float:left;
+	width:460px;
+	height:220px;
+	margin-left:20px;
+	margin-top:20px;
+}
+#rank table{
+	border-collapse:collapse;
+	width:100%;
+}
+#rank tr{
+	height:30px;
+}
+#rank tr:not(:first-child):hover{
+	/*除了表头都设置鼠标悬浮变色*/
+	background:#bbbbbb;
+}
+#rank td,th{
+	padding-left:10px;
+	padding-right:10px;
+	line-height:30px;
+}
+.progress{
+	float:right;
+	width:70%;
+	/*进度条默认有margin-bottom:20px和height:20px，因此此处手动修改*/
+	height:15px;
+	margin-top:7.5px;
+	margin-bottom:7.5px;
+}

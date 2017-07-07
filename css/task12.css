@@ -1,0 +1,146 @@
+table{
+	border-collapse:collapse;
+	margin:20px;
+}
+tr:nth-child(odd){
+	background:grey;
+}
+tr:first-child{
+	background:black;
+	color:white;
+}
+tr:nth-child(2),tr:nth-child(3),tr:nth-child(4){
+	color:red;
+}
+/*创建动画*/
+@keyframes myAnimation{
+	from{width:200px;}
+    to{width:400px;}
+}
+/*将动画绑定到获得焦点的文本框，规定动画的名称和时长*/
+input:focus{
+	animation:myAnimation 5s;
+}
+#move1{
+	position:absolute;
+	bottom:0;
+	left:240px;
+	width:20px;
+	height:20px;
+	background:grey;
+	color:white;
+	text-align:center;
+	font-family:Microsoft Yahei;
+	/*设置10s动画，并循环播放*/
+	animation:change1 10s ease-out infinite;
+}
+#move2{
+	position:absolute;
+	bottom:0;
+	left:260px;
+	width:20px;
+	height:20px;
+	background:grey;
+	color:white;
+	text-align:center;
+	font-family:Microsoft Yahei;
+	/*设置10s动画，并循环播放*/
+	animation:change2 10s ease-out infinite;
+}
+#move3{
+	position:absolute;
+	bottom:0;
+	left:280px;
+	width:20px;
+	height:20px;
+	background:grey;
+	color:white;
+	text-align:center;
+	font-family:Microsoft Yahei;
+	/*设置10s动画，并循环播放*/
+	animation:change3 10s ease-out infinite;
+}
+/*
+思路：
+将3张统一尺寸的图片横向并排放入一个div容器（#photos）内，#photos宽度设置为3个图片的总尺寸
+图片放入相框容器div（#frame），相框宽度设置为1个图片的大小
+设置溢出隐藏，以保证正确显示一个照片
+*/
+#frame{
+	/*
+	正常情况下，如果#frame不加position:relative或者position:absolute，overflow:hidden也是生效的
+	由于要隐藏的元素是#frame的子元素，且使用了绝对定位，若#frame不指定position:relative或者position:absolute，其子元素就不会相对于#frame定位，也就不会溢出隐藏
+	*/
+	position:absolute;
+	margin-top:20px;
+	/*设置为1个图片的大小*/
+	width:300px;
+	height:200px;
+	/*设置溢出隐藏*/
+	overflow:hidden;
+}
+#photos img{
+	float:left;
+	width:300px;
+	height:200px;
+}
+#photos{
+	position:relative;
+	/*设置为3个图片的总尺寸*/
+	width:900px; 
+	/*设置10s动画，并循环播放*/
+	animation:actions 10s ease-out infinite;
+}
+/*
+使用css3动画，对#photos进行位移，每次偏移一个图片的宽度，即可显示下一张图片
+3张图片，需要轮播2次，定义动画30%,65%,100%
+为了让图片轮播后静置一段时间，可以将动画细分为位移切换和静置两个阶段
+如30%~65%里面包含：30%~35%切换到第2张图片和35%~65%将第2张图片静置
+*/
+@keyframes actions{
+	0%,30%{        
+		margin-left:0px;
+	}
+	35%,65%{       
+		margin-left:-300px; 
+	}
+	70%,100%{      
+		margin-left:-600px;    
+	}
+}
+/*为右下角的1添加动画：第一阶段变为红色背景*/
+@keyframes change1{
+	0%,30%{        
+		background:red;
+	}
+	35%,65%{       
+		background:grey;
+	}
+	70%,100%{      
+		background:grey;  
+	}
+}
+/*为右下角的2添加动画：第二阶段变为红色背景*/
+@keyframes change2{
+	0%,30%{        
+		background:grey;
+	}
+	35%,65%{       
+		background:red;
+	}
+	70%,100%{      
+		background:grey;  
+	}
+}
+/*为右下角的3添加动画：第三阶段变为红色背景*/
+@keyframes change3{
+	0%,30%{        
+		background:grey;
+	}
+	35%,65%{       
+		background:grey;
+	}
+	70%,100%{      
+		background:red;  
+	}
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务二十六：行星与飞船（一）</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: Microsoft Yahei;
+				font-size: 15px;
+			}
+			body {
+				background: #000;
+			}
+			#command {
+				background: #fff;
+				padding: 20px;
+				width: 400px;
+				line-height: 30px;
+				margin-top: 30px;
+			}
+			button {
+				margin-right: 15px;
+				padding: 2px;
+				cursor: pointer;
+			}
+			#order {
+				float: left;
+				margin-top: 20px;
+				width: 400px;
+				padding: 20px;
+				background: #aaaaaa;
+			}
+			#universe {
+				position: absolute;
+				width: 600px;
+				height: 600px;
+				left: 600px;
+				top: 30px;
+			}
+			.planet {
+				width: 200px;
+				height: 200px;
+				border-radius: 100px;
+				background: blue;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+			}
+			.orbit {
+				position: absolute;
+				border: 1px solid #aaaaaa;
+				border-radius: 50%;
+			}
+			#orbit1 {
+				width: 300px;
+				height: 300px;
+				top: 150px;
+				left: 150px;
+			}
+			#orbit2 {
+				width: 400px;
+				height: 400px;
+				top: 100px;
+				left: 100px;
+			}
+			#orbit3 {
+				width: 500px;
+				height: 500px;
+				top: 50px;
+				left: 50px;
+			}
+			#orbit4 {
+				width: 600px;
+				height: 600px;
+			}
+			.spaceship {
+				width: 90px;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 20px;
+				border-right: 15px blue solid;
+				background: #aaaaaa;
+				position: absolute;
+				text-align: center;
+				/*顺时针旋转45度，单位deg为度，正数为顺时针旋转，负数为逆时针旋转*/
+				transform: rotate(45deg); 
+				left: 250px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="command">
+			<!-- 		
+			<div><span>对1号飞船下达命令：</span><button id="startToFly">开始飞行</button><button id="stopToFly">停止飞行</button><button id="destroy">销毁</button></div>
+			<div><span>对2号飞船下达命令：</span><button>开始飞行</button><button>停止飞行</button><button>销毁</button></div> 
+			-->
+			<button id="newSpaceship">新的飞船起飞</button>
+		</div>
+		<div id="order"></div>
+		<div id="universe">
+			<div class="planet"></div>
+			<div id="orbit1" class="orbit"></div>
+			<div id="orbit2" class="orbit"></div>
+			<div id="orbit3" class="orbit"></div>
+			<div id="orbit4" class="orbit"></div>
+			<!-- 		
+			<div id="spaceship1" class="spaceship">1号-<span>100%</span></div>
+			<div id="spaceship2" class="spaceship">2号-<span>100%</span></div> 
+			-->
+		</div>
+		<script src="js/task26.js"></script>
+	</body>
+</html>

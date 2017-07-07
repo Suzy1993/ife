@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务三十七：UI组件之浮出层</title>
+		<style>
+			*{
+				font-family:Microsoft Yahei;
+				font-size:15px;
+			}
+			body>p{
+				text-align:center;
+			}
+			#box{
+				/*
+				js控制每次弹出浮出层时重置其宽高和偏移，以免由于拖拽缩放改变了其宽高和偏移
+				width:400px;
+				height:300px;
+				left:50%;
+				top:50%;
+				*/
+				border:1px solid grey;
+				/*当浮出层显示时，屏幕滚动时，浮出层始终保持位置固定在屏幕正中，不随屏幕滚动而变化位置*/
+				position:fixed;
+				/*配合left:50%和top:50%属性使得浮出层的中心默认在屏幕正中，margin-top为height的一半，margin-left为width的一半*/
+				margin:-150px 0 0 -200px; 
+				cursor:pointer;
+				/*设置浮出层位于最高层*/
+				z-index:2; 
+				/*设置浮出层遮住较低层的内容*/
+				background:white;
+				/*开始时隐藏浮出层*/
+				display:none;
+				/*设置溢出隐藏*/
+				overflow:hidden;
+			}
+			#head{
+				width:100%;
+				height:30px;
+				line-height:30px;
+				border-bottom:1px solid grey;
+				float:left;
+			}
+			#close{
+				width:30px;
+				height:30px;
+				line-height:30px;
+				float:right;
+				text-align:center;
+				border-left:1px solid grey;
+			}
+			#box p{
+				padding:10px;
+				line-height:30px;
+				text-indent:2em;
+			}
+			#cover{
+				position:fixed;
+				width:100%;
+				height:100%;
+				left:0;
+				top:0;
+				/*开始时隐藏遮罩*/
+				display:none;
+				/*设置遮罩位于浮出层的下方*/ 
+	    		z-index:1;
+	   		}
+			#top{
+				width:100%;
+				height:1px;
+				position:absolute;
+				left:0;
+				top:0;
+				cursor:s-resize;
+				z-index:3;
+			}
+			#right{
+				width:1px;
+				height:100%;
+				position:absolute;
+				right:0;
+				top:0;
+				cursor:e-resize;
+				z-index:3;
+			}
+			#bottom{
+				width:100%;
+				height:1px;
+				position:absolute;
+				left:0;
+				bottom:0;
+				cursor:n-resize;
+				z-index:3;
+			}
+			#left{
+				width:1px;
+				height:100%;
+				position:absolute;
+				left:0;
+				top:0;
+				cursor:w-resize;
+				z-index:3;
+			}
+			#drag{
+				width:10px;
+				height:10px;
+				position:absolute;
+				right:0px;
+				bottom:0px;
+				cursor:nw-resize;
+				z-index:3;
+			}
+		</style>
+	</head>
+	<body>
+		<button>打开浮层</button>
+		<div id="cover"></div><!--实现一个半透明的遮罩来挡住浮出层外的部分-->
+		<div id="box">
+			<div id="head">
+				浮出层
+				<div id="close">X</div>
+			</div>
+			<p>
+			前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+			<div id="top"></div>
+			<div id="right"></div>
+			<div id="bottom"></div>
+			<div id="left"></div>
+			<div id="drag"></div>
+		</div>
+		<p>第1章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第2章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第3章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第4章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第5章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第6章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第7章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第8章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<p>第9章</p>
+		<p>---第1节</p>
+		<p>---第2节</p>
+		<script src="js/task37.js"></script>
+	</body>
+</html>

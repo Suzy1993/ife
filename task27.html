@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务二十七：行星与飞船（二）</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: Microsoft Yahei;
+				font-size: 12px;
+			}
+			#universe {
+				position: relative;
+				width: 100%;
+				height: 450px;
+				background: black;
+				float:left;
+			}
+			#command {
+				width: 100%;
+				line-height: 20px;
+				margin-top: 5px;
+				float: left;
+				border: 1px solid grey;
+				padding:10px 0;
+			}
+			button {
+				margin-right: 15px;
+				height: 20px;
+				line-height: 20px;
+				cursor: pointer;
+			}
+			#order {
+				float: left;
+				width: 100%;
+				padding:5px 0;
+				border: 1px solid grey;
+			}
+			.planet {
+				width: 200px;
+				height: 200px;
+				border-radius: 100px;
+				background: blue;
+				position: absolute;
+				top: 125px;
+				left: 125px;
+			}
+			.orbit {
+				position: absolute;
+				border: 1px solid grey;
+				border-radius: 50%;
+			}
+			#orbit1 {
+				width: 250px;
+				height: 250px;
+				top: 100px;
+				left: 100px;
+			}
+			#orbit2 {
+				width: 300px;
+				height: 300px;
+				top: 75px;
+				left: 75px;
+			}
+			#orbit3 {
+				width: 350px;
+				height: 350px;
+				top: 50px;
+				left: 50px;
+			}
+			#orbit4 {
+				width: 400px;
+				height: 400px;
+				top: 25px;
+				left: 25px;
+			}
+			.spaceship {
+				width: 80px;
+				height: 20px;
+				line-height: 20px;
+				border-radius: 20px;
+				border-right: 15px blue solid;
+				background: #aaaaaa;
+				position: absolute;
+				text-align: center;
+				/*顺时针旋转45度，单位deg为度，正数为顺时针旋转，负数为逆时针旋转*/
+				transform: rotate(45deg); 
+				left: 185px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="universe">
+			<div class="planet"></div>
+			<div id="orbit1" class="orbit"></div>
+			<div id="orbit2" class="orbit"></div>
+			<div id="orbit3" class="orbit"></div>
+			<div id="orbit4" class="orbit"></div>
+			<!-- 		
+			<div id="spaceship1" class="spaceship">1号-<span>100%</span></div>
+			<div id="spaceship2" class="spaceship">2号-<span>100%</span></div> 
+			-->
+		</div>
+		<div id="command">
+			动力系统选择：
+			<input type="radio" name="power" value="forward" checked>前进号(速率30px/s，能耗5%/s)&nbsp;&nbsp;
+			<input type="radio" name="power" value="rise">奔腾号(速率50px/s，能耗7%/s)&nbsp;&nbsp;
+			<input type="radio" name="power" value="exceed">超越号(速率80px/s，能耗9%/s)<br>
+			能源系统选择：
+			<input type="radio" name="energy" value="strength" checked>劲量型(补充能源速度2%/s)&nbsp;&nbsp;
+			<input type="radio" name="energy" value="light">光能型(补充能源速度3%/s)&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="energy" value="forever">永久型(补充能源速度4%/s)<br>
+			<button id="newSpaceship">创建新飞船</button>
+		</div>
+		<div id="order">
+			<!-- 		
+			<div><span>对1号飞船下达命令：</span><button id="startToFly">开始飞行</button><button id="stopToFly">停止飞行</button><button id="destroy">销毁</button></div>
+			<div><span>对2号飞船下达命令：</span><button>开始飞行</button><button>停止飞行</button><button>销毁</button></div> 
+			-->
+		</div>
+		<script src="js/task27.js"></script>
+	</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务二十五：JavaScript和树（四）</title>
+		<style>
+			.types a {
+				text-decoration:none;
+				color:#999999;
+			}
+			.types a:hover {
+				text-decoration:none;
+				color:red;
+			}
+			.types ul, .files ul {
+				/*隐藏所有的子ul*/
+				display:none;
+			}
+			.type {
+				margin-top:10px;
+				margin-bottom:10px;
+				list-style-image:url(images/task25_1.png);
+			}
+			.file {
+				margin-top:10px;
+				margin-bottom:10px;
+				list-style-image:url(images/task25_2.png);
+			}
+			.document {
+				margin-top:10px;
+				margin-bottom:10px;
+				list-style-image:url(images/task25_3.png);	
+			}
+			span {
+				color:#999999;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="types">
+			<li class="type">
+				<span>个人报表</span><ul class="files"><!--span和ul之间不要换行，否则span的nextSibling不是ul而是文本节点-->
+					<li class="file"><span>文件1-1</span><ul><li class="document"><a href="#">文档1-1-1</a></li><li class="document"><a href="#">文档1-1-2</a></li></ul></li><!--li和span之间不要换行，否则li的firstChild不是span而是文本节点-->
+					<li class="file"><span>文件1-2</span><ul><li class="document"><a href="#">文档1-2-1</a></li><li class="document"><a href="#">文档1-2-2</a></li></ul></li>
+					<li class="file"><span>文件1-3</span><ul><li class="document"><a href="#">文档1-3-1</a></li><li class="document"><a href="#">文档1-3-2</a></li></ul></li>
+				</ul>
+			</li>
+			<li class="type">
+				<span>个人收藏</span><ul class="files">
+					<li class="file"><span>文件2-1</span><ul><li class="document"><a href="#">文档2-1-1</a></li><li class="document"><a href="#">文档2-1-2</a></li></ul></li>
+					<li class="file"><span>文件2-2</span><ul><li class="document"><a href="#">文档2-2-1</a></li><li class="document"><a href="#">文档2-2-2</a></li></ul></li>
+					<li class="file"><span>文件2-3</span><ul><li class="document"><a href="#">文档2-3-1</a></li><li class="document"><a href="#">文档2-3-2</a></li></ul></li>
+				</ul>
+			</li>
+			<li class="type">
+				<span>我的分享</span><ul class="files">
+					<li class="file"><span>文件3-1</span><ul><li class="document"><a href="#">文档3-1-1</a></li><li class="document"><a href="#">文档3-1-2</a></li></ul></li>		
+					<li class="file"><span>文件3-2</span><ul><li class="document"><a href="#">文档3-2-1</a></li><li class="document"><a href="#">文档3-2-2</a></li></ul></li>
+					<li class="file"><span>文件3-3</span><ul><li class="document"><a href="#">文档3-3-1</a></li><li class="document"><a href="#">文档3-3-2</a></li></ul></li>
+				</ul>
+			</li>
+			<li class="type">
+				<span>图库</span><ul class="files">
+					<li class="file"><span>文件4-1</span><ul><li class="document"><a href="#">文档4-1-1</a></li><li class="document"><a href="#">文档4-1-2</a></li></ul></li>
+					<li class="file"><span>文件4-2</span><ul><li class="document"><a href="#">文档4-2-1</a></li><li class="document"><a href="#">文档4-2-2</a></li></ul></li>
+					<li class="file"><span>文件4-3</span><ul><li class="document"><a href="#">文档4-3-1</a></li><li class="document"><a href="#">文档4-3-2</a></li></ul></li>
+				</ul>
+			</li>
+			<li class="type">
+				<span>成长记录</span><ul class="files">
+					<li class="file"><span>文件5-1</span><ul><li class="document"><a href="#">文档5-1-1</a></li><li class="document"><a href="#">文档5-1-2</a></li></ul></li>
+					<li class="file"><span>文件5-2</span><ul><li class="document"><a href="#">文档5-2-1</a></li><li class="document"><a href="#">文档5-2-2</a></li></ul></li>
+					<li class="file"><span>文件5-3</span><ul><li class="document"><a href="#">文档5-3-1</a></li><li class="document"><a href="#">文档5-3-2</a></li></ul></li>
+				</ul>
+			</li>
+			<li class="type">
+				<span>账户信息</span><ul class="files">
+					<li class="file"><span>文件6-1</span><ul><li class="document"><a href="#">文档6-1-1</a></li><li class="document"><a href="#">文档6-1-2</a></li></ul></li>
+					<li class="file"><span>文件6-2</span><ul><li class="document"><a href="#">文档6-2-1</a></li><li class="document"><a href="#">文档6-2-2</a></li></ul></li>
+					<li class="file"><span>文件6-3</span><ul><li class="document"><a href="#">文档6-3-1</a></li><li class="document"><a href="#">文档6-3-2</a></li></ul></li>
+				</ul>
+			</li>
+		</ul>
+		<input type="text">
+		<button>查找</button>
+		<button>添加</button>
+		<button>删除</button>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/task25.js"></script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+#out{
+	/*设置div的左上角位于浏览器中央*/
+	position: fixed; 
+	left:50%; 
+	top:50%; 
+	width:400px;
+	height:200px;
+	background:#ccc;
+	/*为使div位于浏览器中央，需要设置margin-top为其高度的一半的相反数即上移高度的一半，设置margin-left为其宽度的一半的相反数即左移宽度的一半*/
+	margin: -100px 0 0 -200px; 
+}
+#leftTop{
+	/*相对设置了position: fixed的父元素定位*/
+	position:absolute;
+	left:0; 
+	top:0;
+	width:50px;
+	height:50px;
+	background:#fc0;
+	/*左上角的四分之一圆设置border-bottom-right-radius为圆的半径*/
+	border-bottom-right-radius:50px;
+}
+#rightBottom{
+	/*相对设置了position: fixed的父元素定位*/
+	position:absolute;
+	right:0; 
+	bottom:0;
+	width:50px;
+	height:50px;
+	background:#fc0;
+	/*右下角的四分之一圆设置border-top-left-radius为圆的半径*/
+	border-top-left-radius:50px;
+}

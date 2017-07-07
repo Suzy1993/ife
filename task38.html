@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务三十八：UI组件之排序表格</title>
+		<style>
+			*{
+				font-family:Microsoft Yahei;
+				font-size:15px;
+			}
+			table {
+				border-collapse:collapse;		
+				position:relative;	
+			}
+			td,th {
+				border:1px solid #000;
+				width:100px;
+				text-align:center;
+				padding:5px;
+			}
+			th {
+				cursor:pointer;
+				background:#eeeeee;
+			}
+			img{
+				position:absolute;
+				z-index:2;
+				cursor:pointer;
+			}
+			#mathUp{
+				top:16px;
+				left:210px;
+			}
+			#mathDown{
+				top:26px;
+				left:210px;
+			}
+			#ChineseUp{
+				top:16px;
+				left:321px;
+			}
+			#ChineseDown{
+				top:26px;
+				left:321px;
+			}
+			#EnglishUp{
+				top:16px;
+				left:432px;
+			}
+			#EnglishDown{
+				top:26px;
+				left:432px;
+			}
+			#totalUp{
+				top:16px;
+				left:543px;
+			}
+			#totalDown{
+				top:26px;
+				left:543px;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>姓名</th>
+				<th>数学</th>
+				<th>语文</th>
+				<th>英语</th>
+				<th>总分</th>
+			</tr>
+			<img id="mathUp" src="images/task38_1.png">
+			<img id="mathDown" src="images/task38_2.png">
+			<img id="ChineseUp" src="images/task38_1.png">
+			<img id="ChineseDown" src="images/task38_2.png">
+			<img id="EnglishUp" src="images/task38_1.png">
+			<img id="EnglishDown" src="images/task38_2.png">
+			<img id="totalUp" src="images/task38_1.png">
+			<img id="totalDown" src="images/task38_2.png">
+		</table>
+		<script src="js/task38.js"></script>
+	</body>
+</html>

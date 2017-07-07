@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务三十一：表单（三）联动</title>
+		<style>
+			#form2 {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		在校生<input type="radio" value="在校生" name="type" checked>
+		非在校生<input type="radio" value="非在校生" name="type">
+		<form id="form1">
+			学校
+			<select id="city">
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="广州">广州</option>
+			</select>
+			<select id="school">
+				<option value="清华大学">清华大学</option>
+				<option value="北京大学">北京大学</option>
+				<option value="北京邮电大学">北京邮电大学</option>
+			</select>
+		</form>
+		<form id="form2">
+			就业单位
+			<input type="text">
+		</form>
+		<script src="js/task31.js"></script>
+	</body>
+</html>

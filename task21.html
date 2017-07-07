@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>任务二十一：基础JavaScript练习（四）</title>
+		<style>
+			#tags{
+				width:100%;
+				height:50px;
+			}
+			.tags{
+				/*div自适应内容宽度*/
+				width:fit-content;
+				height:30px;
+				line-height:30px;
+				background:red;
+				text-align:center;
+				color:white;
+				font-size:15px;
+				font-family:Microsoft Yahei;
+				float:left;
+				margin-right:20px;
+				margin-top:20px;
+			}
+			textarea{
+				width:200px;
+				height:100px;
+				margin:20px 0;
+			}
+		</style>
+	</head>
+	<body>
+		Tag：<input type="text" id="tag"><br>
+		<div id="tags"></div>
+		<textarea></textarea><br>
+		<input type="button" value="确认兴趣爱好" onclick="showHobbies()">
+		<div id="hobbies"></div>
+		<script src="js/task21.js"></script>
+	</body>
+</html>
